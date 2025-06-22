@@ -76,7 +76,7 @@ const User = () => {
                                                 {
                                                     user.role === 'admin'
                                                     ? <Badge className='bg-blue-950 text-white px-3 py-1 rounded-md shadow-lg'>{user.role}</Badge>
-                                                    : <Badge className='bg-green-900 text-white px-3 py-1 rounded-md shadow-lg'>{user.role}</Badge>
+                                                    : <Badge className='bg-green-700 text-white px-3 py-1 rounded-md shadow-lg'>{user.role}</Badge>
                                                 }
                                             </TableCell>
                                             <TableCell>{user.email}</TableCell>

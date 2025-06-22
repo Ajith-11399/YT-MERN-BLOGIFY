@@ -37,7 +37,7 @@ const BlogCard = ({props}) => {
                             <Badge variant='outline' className='bg-blue-950 text-white' >Admin</Badge>
                         } */}
 
-                        <Badge variant='outline' className='bg-blue-950 text-white px-3 py-1 rounded-md shadow-lg' >
+                        <Badge variant='outline' className={`bg-blue-950 text-white px-3 py-1 rounded-md shadow-lg ${ props.author.role === 'admin' ? 'bg-blue-950' : 'bg-green-700' }`} >
                             { props.author.role === 'admin' ? 'admin' : 'user' }
                         </Badge>
 
