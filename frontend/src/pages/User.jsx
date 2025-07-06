@@ -69,7 +69,7 @@ const User = () => {
                                                 {
                                                     user.avatar 
                                                     ? <img src={user.avatar} className='w-10 h-10 rounded-full shadow-lg' alt="" />
-                                                    : <FaRegCircleUser />
+                                                    : <FaRegCircleUser className='w-10 h-10' />
                                                 }
                                             </TableCell>
                                             <TableCell>
