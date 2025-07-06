@@ -68,16 +68,20 @@ const CommentList = ({ props }) => {
                             <div key={comment._id} className='flex gap-3 m-2 p-3 hover:scale-[101%] border-b-[0.5px] transition-all'>
                     
                                 <Avatar>
-                                    { comment?.user.avatar
+                                    { comment?.user?.avatar
                                         ? <AvatarImage className='w-10 h-10 rounded-full shadow-lg hover:scale-105 transition-all ' src={comment?.user.avatar} />
-                                        : <FaRegCircleUser className='w-20 h-20' />
+                                        : <FaRegCircleUser className='w-10 h-10' />
                                     }
                                 </Avatar>
                                     
                                 <div>
-                                    <p className='font-bold text-sm'>{comment?.user.name}</p>
-                                    <p className='text-sm'>{moment(comment?.createdAt).format('MMMM Do, YYYY')}</p>
-                                    <div className='pt-2 text-sm'>{comment?.comment}</div>
+                                    <p>
+                                        <span className='font-bold text-sm'>
+                                            { comment?.user?.name ? comment?.user.name : 'User not found'}
+                                        </span>,&nbsp;
+                                        <span className='text-sm'>{moment(comment?.createdAt).format('MMMM Do, YYYY')}</span>
+                                    </p>
+                                    <p className='pt-2 text-sm'>{comment?.comment}</p>
                                 </div>
                                     
                             </div>

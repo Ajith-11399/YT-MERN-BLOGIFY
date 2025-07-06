@@ -25,20 +25,25 @@ const BlogCard = ({props}) => {
 
                         <div className='flex items-center justify-between py-2 gap-3'>
                             <Avatar className='shadow-lg'>
-                                { props.author.avatar
+                                { props.author?.avatar
                                     ? <AvatarImage src={props.author.avatar} />
-                                    : <FaRegCircleUser className='w-20' />
+                                    : <FaRegCircleUser className='w-10 h-10' />
                                 }
                             </Avatar>
-                            <span>{props.author.name}</span>
+                            {
+                                props.author?.name
+                                ?   <span>{props.author?.name}</span>
+                                :   <span>User not found!!</span>
+                            }
+                            
                         </div>
 
                         {/* { props.author.role === 'admin' && 
                             <Badge variant='outline' className='bg-blue-950 text-white' >Admin</Badge>
                         } */}
 
-                        <Badge variant='outline' className={`bg-blue-950 text-white px-3 py-1 rounded-md shadow-lg ${ props.author.role === 'admin' ? 'bg-blue-950' : 'bg-green-700' }`} >
-                            { props.author.role === 'admin' ? 'admin' : 'user' }
+                        <Badge variant='outline' className={`bg-blue-950 text-white px-3 py-1 rounded-md shadow-lg ${ props.author?.role === 'admin' ? 'bg-blue-950' : 'bg-green-700' }`} >
+                            { props.author?.role === 'admin' ? 'admin' : 'user' }
                         </Badge>
 
                     </div>
@@ -52,13 +57,13 @@ const BlogCard = ({props}) => {
                             <IoCalendarNumberOutline />
                             <span>{moment(props.createdAt).format('MMMM Do, YYYY')}</span>
                         </p>
-                        <h2 className='text-2xl font-bold line-clamp-2'>
+                        <p className='text-xl font-bold line-clamp-2'>
                             {
-                                props.title.length >= 50
-                                ? <span>{props.title.slice(0, 20)} ...</span>
+                                props.title.length >= 25
+                                ? <span>{props.title.slice(0, 25)} ...</span>
                                 : props.title
                             }
-                        </h2>
+                        </p>
                     </div>
 
                 </CardContent>

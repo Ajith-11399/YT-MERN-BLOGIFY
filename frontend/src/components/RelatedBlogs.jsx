@@ -36,7 +36,7 @@ const RelatedBlogs = ({ props }) => {
                                             <h4 className='line-clamp-2 text-md font-semibold'>
                                                 {blog.title.length > 22 ? blog.title.slice(0, 22) : blog.title }
                                             </h4>
-                                            <p className='text-xs'>Post : {blog.author.name}&nbsp;,&nbsp;{moment(blog.createdAt).format('MMMM Do YYYY')}</p>
+                                            <p className='text-xs'>Posted on: {moment(blog.createdAt).format('MMMM Do YYYY')}</p>
                                         </div>
                                     </div>
                                 </Link>

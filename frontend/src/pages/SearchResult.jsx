@@ -21,7 +21,7 @@ const SearchResult = () => {
             <div className='flex items-center gap-3 text-3xl font-bold text-blue-950 border-b-2 border-blue-950 mb-5 pb-2 w-fit'>
                 <h4>Search results for : {q}</h4>
             </div>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10'>
+            <div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-10'>
             
                 {
                     blogData?.blog?.length > 0
