@@ -445,10 +445,10 @@ const Index = () => {
 
                             <motion.div initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}}>
                                 <h2 className="text-black text-2xl md:text-4xl font-bold text-center leading-tight mb-2">
-                                   Latest Blogs & Stories
+                                   Get In Touch With Us
                                 </h2>
                                 <p className="text-black text-lg font-medium text-center mb-3">
-                                    Dive into fresh insights, ideas, and perspectives — curated just for you.
+                                    Have questions, feedback, or just want to say hi? Fill out the form — we’d love to hear from you.
                                 </p>
                             </motion.div>
 
