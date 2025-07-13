@@ -186,7 +186,7 @@ const Index = () => {
 
             {/* Navbar */}
             <div className='container'>
-                <div className={`w-full flex justify-between items-center fixed z-50 px-5 py-3 ${ isScroll ? 'backdrop-blur-none bg-white shadow-sm transform-all duration-500' : 'bg-transparent transform-all duration-500' }`}>
+                <div className={`w-full flex justify-between items-center fixed z-50 px-5 py-3 ${ isScroll ? 'backdrop-blur-md bg-white/20 shadow-sm transform-all duration-500' : 'bg-transparent transform-all duration-500' }`}>
                     <Link to={RouteHome}>
                         <p className='text-3xl font-bold text-blue-950 hover:scale-105 hover:transition-all hover:duration-300'>Blogify</p>
                     </Link>
