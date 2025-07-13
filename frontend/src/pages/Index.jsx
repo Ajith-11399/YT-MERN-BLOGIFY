@@ -223,7 +223,7 @@ const Index = () => {
                             <motion.div initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}}>
                                 <Button>
                                     <Link to={RouteHome} className='flex items-center justify-center px-5 gap-2 py-2 hover:scale-105 hover:transition-all hover:duration-300'>
-                                        Visit Site<FaArrowRight />
+                                        Explore more<FaArrowRight />
                                     </Link>
                                 </Button>
                             </motion.div>
