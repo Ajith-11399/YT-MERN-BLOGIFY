@@ -11,6 +11,7 @@ import {
   RouteCategoryDetails,
   RouteComment,
   RouteEditCategory,
+  RouteHome,
   RouteIndex,
   RouteProfile,
   RouteSearch,
@@ -38,15 +39,17 @@ import Comments from "./pages/Comments";
 import User from "./pages/User";
 import AuthRouteProtection from "./components/AuthRouteProtection";
 import AdminOnly from "./components/AdminOnly";
+import Index from "./pages/Index";
 
 function App() {
   return (
     <>
       <ToastContainer />
       <Routes>
-        <Route path={RouteIndex} element={<Layout />}>
+        <Route path={RouteIndex} element={<Index />} />
+        <Route element={<Layout />}>
           {/* Home */}
-          <Route index element={<Home />} />
+          <Route path={RouteHome} element={<Home />} />
           
           {/* Blogs */}
           <Route path={RouteBlogDetails()} element={<OneDetails />} />

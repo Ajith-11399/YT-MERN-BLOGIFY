@@ -7,10 +7,11 @@ import { RiBloggerLine } from "react-icons/ri";
 import { LiaComments } from "react-icons/lia";
 import { FiUsers } from "react-icons/fi";
 import { GoDot } from "react-icons/go";
-import { RouteBlogByCategory, RouteBlogs, RouteCategoryDetails, RouteComment, RouteIndex, RouteUser } from '@/helpers/RouteName';
+import { RouteBlogByCategory, RouteBlogs, RouteCategoryDetails, RouteComment, RouteHome, RouteIndex, RouteUser } from '@/helpers/RouteName';
 import { useFetch } from '@/hooks/useFetch.js';
 import { getEnv } from '@/helpers/getEnv.js';
 import { useSelector } from 'react-redux';
+import reactJs from '../../assets/reactJs.png';
 
 const AppSidebar = () => {
 
@@ -32,8 +33,14 @@ const AppSidebar = () => {
                     <SidebarMenu>
                         <SidebarMenuItem>
                             <SidebarMenuButton>
+                                <img src={reactJs} className='w-4 h-4' alt="" />
+                                <Link to={RouteIndex}>Landing Page</Link>
+                            </SidebarMenuButton>
+                        </SidebarMenuItem>
+                        <SidebarMenuItem>
+                            <SidebarMenuButton>
                                 <IoHomeOutline />
-                                <Link to={RouteIndex}>Home</Link>
+                                <Link to={RouteHome}>Home</Link>
                             </SidebarMenuButton>
                         </SidebarMenuItem>
                         {

@@ -3,7 +3,7 @@ import { Button } from './ui/button';
 import { MdLogin } from 'react-icons/md'
 import { Link, useNavigate } from 'react-router-dom';
 import SearchBox from './SearchBox';
-import { RouteBlogAdd, RouteIndex, RouteProfile, RouteSignIn } from '@/helpers/RouteName';
+import { RouteBlogAdd, RouteHome, RouteIndex, RouteProfile, RouteSignIn } from '@/helpers/RouteName';
 import { useDispatch, useSelector } from 'react-redux';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -47,7 +47,7 @@ const Topbar = () => {
             };
             dispatch(removeUser());
             showToast('success', data.message);
-            navigate(RouteIndex)
+            navigate(RouteHome)
         } catch (error) {
             showToast('error', error.message);
         }
@@ -65,7 +65,7 @@ const Topbar = () => {
                 <button onClick={toggleSidebar} type='button' className='md:hidden'>
                     <AiOutlineMenu size={20} />
                 </button>
-                <Link to={RouteIndex}>
+                <Link to={RouteHome}>
                     <p className='text-3xl font-bold text-blue-950 hover:scale-105 hover:transition-all hover:duration-300'>Blogify</p>
                 </Link>
             </div>

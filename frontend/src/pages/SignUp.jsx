@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Link, useNavigate } from 'react-router-dom';
-import { RouteIndex, RouteSignIn } from '@/helpers/RouteName';
+import { RouteHome, RouteIndex, RouteSignIn } from '@/helpers/RouteName';
 import { getEnv } from '@/helpers/getEnv.js';
 import showToast from '@/helpers/showToast.js';
 import GoogleAuth from '@/components/GoogleAuth';
@@ -63,7 +63,7 @@ const SignUp = () => {
 
             <div className='shadow-lg rounded-lg space-y-3 border-none p-5 w-full max-w-sm'>
                 
-                <Link to={RouteIndex}>
+                <Link to={RouteHome}>
                     <p className='text-3xl text-center font-bold text-blue-950 hover:scale-110 hover:transition-all hover:duration-300'>Blogify</p>
                 </Link>
 
