@@ -135,7 +135,7 @@ const Index = () => {
         {
             img: vercel,
             tech: 'Vercel',
-            desc: 'Frontend hosting and deployment platform',
+            desc: 'Web hosting and deployment platform',
         },
     ];
 
