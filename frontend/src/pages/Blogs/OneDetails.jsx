@@ -11,6 +11,7 @@ import CommentCount from '@/components/CommentCount';
 import LikeCount from '@/components/LikeCount';
 import RelatedBlogs from '@/components/RelatedBlogs';
 import { FaRegCircleUser } from 'react-icons/fa6';
+import {Image} from "lightbox.js-react"
 
 const OneDetails = () => {
 
@@ -19,10 +20,7 @@ const OneDetails = () => {
     const { data, loading, error } = useFetch(`${getEnv('VITE_BACKEND_URL')}/blog/one-blog/${blog}`,{
         method: 'get',
         credentials: 'include',
-    }, [blog, category]);
-
-    console.log(data);
-    
+    }, [blog, category]);    
     
     if(loading) return <Loading />;
 
@@ -65,11 +63,13 @@ const OneDetails = () => {
                     
                     {/* Blog Image */}
                     <div className='my-5'>
-                        <img src={data.blog.featuredImage} className='rounded-lg' alt="" />
+                        {/* <img src={data.blog.featuredImage} className="rounded-lg w-full h-[300px] md:h-[500px] object-cover" alt="" /> */}
+                        <Image image={{src: `${data.blog.featuredImage}`, title: `${data.blog.title}`}} className="rounded-lg w-full h-[200px] md:h-[400px] object-cover" />
                     </div>
                     
                     {/* Blog Content */}
-                    <div className='mt-10' dangerouslySetInnerHTML={{ __html: decode( data.blog.blogContent ) || '' }}></div>
+                    <div className="mt-10" dangerouslySetInnerHTML={{ __html: decode( data.blog.blogContent ) || '' , }}></div>
+
 
                     {/* Post a comment */}
                     <div className='border-top mt-5 pt-5'>
