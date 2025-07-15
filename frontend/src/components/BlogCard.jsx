@@ -49,7 +49,7 @@ const BlogCard = ({props}) => {
                     </div>
 
                     <div className='my-2'>
-                        <img src={props.featuredImage} className='w-full h-52 rounded-md shadow-lg' alt="" />
+                        <img src={props.featuredImage} className='w-full h-52 rounded-md shadow-sm' alt="" />
                     </div>
                         
                     <div className=''>
