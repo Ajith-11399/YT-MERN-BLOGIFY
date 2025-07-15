@@ -6,7 +6,7 @@ import { auth, provider } from '@/helpers/firebase';
 import { getEnv } from '@/helpers/getEnv.js';
 import showToast from '@/helpers/showToast';
 import { useNavigate } from 'react-router-dom';
-import { RouteIndex } from '@/helpers/RouteName';
+import { RouteHome, RouteIndex } from '@/helpers/RouteName';
 import { useDispatch } from 'react-redux';
 import { setUser } from '@/redux/user/userSlice';
 
@@ -41,7 +41,7 @@ const GoogleAuth = () => {
             };
 
             dispatch(setUser(data.user));
-            navigate(RouteIndex);
+            navigate(RouteHome);
             showToast('success', data.message);
 
         } catch (error) {
