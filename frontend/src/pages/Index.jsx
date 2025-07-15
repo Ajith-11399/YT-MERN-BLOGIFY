@@ -400,7 +400,7 @@ const Index = () => {
             <section className='relative'>
                 <div style={{ backgroundImage: `url(${bgBlog})` }} className="bg-cover bg-center bg-no-repeat w-full">
                     <div className="bg-white/25 backdrop-blur-lg flex items-center justify-center px-4 py-20">
-                        <div className="w-full max-w-full flex flex-col gap-6 items-center justify-center">
+                        <div className="w-full lg:w-5/6 max-w-full flex flex-col gap-6 items-center justify-center">
 
                             <motion.div initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}}>
                                 <div>
@@ -413,10 +413,10 @@ const Index = () => {
                                 </div>
                             </motion.div>
 
-                            <motion.div initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}} className='grid lg:grid-cols-3 md:grid-cols-2 gap-10 py-10'>
+                            <motion.div initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}} className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 gap-10 py-10'>
 
                                 {blogData?.blogs?.length > 0 
-                                    ? blogData.blogs.slice(0, 3).map((blogs) => (
+                                    ? blogData.blogs.slice(0, 6).map((blogs) => (
                                         <BlogCard key={blogs._id} props={blogs} />
                                     ))
                                     : <div>Data Not Found!</div>
@@ -532,6 +532,7 @@ const Index = () => {
                 </div>
             </section>
 
+            {/* Footer */}
             <footer className='bg-black'>
                 <div className="w-full border-t-1 border-t-blue-950">
                     <div className="backdrop-blur-lg justify-center px-4 py-10">
