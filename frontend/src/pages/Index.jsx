@@ -54,6 +54,7 @@ import { IoIosSend } from "react-icons/io";
 
 // Footer
 import bgFooter from '../assets/bg-footer.jpg';
+import Tools from '@/components/3DSlider/Tools';
 
 const Index = () => {
 
@@ -76,7 +77,7 @@ const Index = () => {
         })
     }, []);
 
-    const technologies = [
+    const tools = [
         {
             img: reactJs,
             tech: 'ReactJs',
@@ -186,7 +187,7 @@ const Index = () => {
 
             {/* Navbar */}
             <div className='container'>
-                <div className={`w-full flex justify-between items-center fixed z-50 px-5 py-3 ${ isScroll ? 'backdrop-blur-md bg-white/20 shadow-lg transform-all duration-500' : 'bg-transparent transform-all duration-500' }`}>
+                <div className={`w-full flex justify-between items-center fixed top-0 left-0 z-50 px-5 py-3 ${ isScroll ? 'backdrop-blur-md bg-white/20 shadow-lg transform-all duration-500' : 'bg-transparent transform-all duration-500' }`}>
                     <Link to={RouteHome}>
                         <p className='text-3xl font-bold text-blue-950 hover:scale-105 hover:transition-all hover:duration-300'>Blogify</p>
                     </Link>
@@ -356,7 +357,7 @@ const Index = () => {
                 </div>
             </section>
 
-            {/* Technologies Used */}
+            {/* Tools Used */}
             <section className='relative'>
                 <div style={{ backgroundImage: `url(${bgTech})` }} className="bg-cover bg-center bg-no-repeat w-full">
                     <div className="bg-white/25 backdrop-blur-lg flex items-center justify-center px-4 py-20">
@@ -364,15 +365,15 @@ const Index = () => {
 
                             <div className=''>
                                 <h2 className="text-black text-2xl md:text-4xl font-bold text-center leading-tight mb-2">
-                                   Technologies Powering Blogify
+                                   Tools Powering Blogify
                                 </h2>
                                 <p className="text-black text-lg font-medium text-center mb-3">
                                     Built with modern tools to ensure performance, security, and a smooth user experience.
                                 </p>
                             </div>
 
-                            <div className="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-3 gap-10 px-4 pt-5">
-                                {technologies.map((ele, i) => (
+                            {/* <div className="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-3 gap-10 px-4 pt-5">
+                                {tools.map((ele, i) => (
                                     <motion.div
                                         key={ele.tech}
                                         className="flex flex-col items-center text-center backdrop-blur-sm bg-white/10 shadow-lg p-6 rounded-xl transition-transform duration-300 hover:scale-105"
@@ -387,10 +388,10 @@ const Index = () => {
                                         <p className="text-sm text-black mt-1">{ele.desc}</p>
                                     </motion.div>
                                 ))}
+                            </div> */}
 
+                            <Tools />
 
-                            </div>
-                            
                         </div>
                     </div>
                 </div>

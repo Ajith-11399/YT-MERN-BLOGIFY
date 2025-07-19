@@ -80,7 +80,9 @@ textarea:focus+label,
     font-size: 0.8rem;
     color: #172554;
     text-transform: none;
-    background-color: #fff;
+    /* background-color: #e8ecf7; */
+    background-color: #e4e9f5;
+    /* background-color: #dfe6f3; */
 }
 
 .file-field {
@@ -107,4 +109,27 @@ textarea:focus+label,
     border-radius: 4px;
     font-size: 0.9rem;
     transition: background-color 0.3s ease;
+}
+
+.swiper-horizontal {
+    padding: 50px 20px !important;
+}
+
+.swiper-button-prev {
+    left: 20px !important;
+}
+
+.swiper-button-next {
+    right: 20px !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    border-radius: 50%;
 }
