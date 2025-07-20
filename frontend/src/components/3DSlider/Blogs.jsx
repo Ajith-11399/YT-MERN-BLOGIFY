@@ -51,7 +51,7 @@ const Blogs = () => {
     const zIndex = { left: 1, center: 2, right: 1, };
 
     return (
-        <section className="w-full px-6 pt-16 pb-8">
+        <section className="w-full px-6 pt-16">
             <div className="max-w-7xl mx-auto text-center">
                 {/* Blog Carousel */}
                 <AnimatePresence mode="popLayout" initial={false}>
@@ -92,7 +92,7 @@ const Blogs = () => {
                     <motion.button
                         whileTap={{ scale: 0.9 }}
                         onClick={() => handleClick(-1)}
-                        className="w-12 h-12 rounded-full bg-white hover:bg-blue-100 transition-all shadow-lg flex items-center justify-center text-2xl text-gray-600"
+                        className="w-12 h-12 rounded-full bg-white hover:bg-blue-100 transition-all flex items-center justify-center text-2xl text-gray-600"
                         aria-label="Previous"
                     >
                         <IoIosArrowBack />
@@ -100,7 +100,7 @@ const Blogs = () => {
                     <motion.button
                         whileTap={{ scale: 0.9 }}
                         onClick={() => handleClick(1)}
-                        className="w-12 h-12 rounded-full bg-white hover:bg-blue-100 transition-all shadow-lg flex items-center justify-center text-2xl text-gray-600"
+                        className="w-12 h-12 rounded-full bg-white hover:bg-blue-100 transition-all flex items-center justify-center text-2xl text-gray-600"
                         aria-label="Next"
                     >
                         <IoIosArrowForward />

@@ -216,13 +216,13 @@ const Index = () => {
                                 Welcome to Blogify!
                                 <img src={handIcon} className='w-6 wave-hover' alt='' />
                             </motion.p>
-                            <motion.h1 initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}} className="text-4xl md:text-6xl font-bold mb-3">
+                            <motion.h1 initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}} className="text-4xl md:text-6xl font-bold my-3">
                                 Your Daily Dose of Insight & Inspiration
                             </motion.h1>
-                            <motion.p initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}} className="text-2xl font-bold my-5">
-                                Explore stories, trends, and ideas shaping the digital world — one post at a time.
+                            <motion.p initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}} className="text-2xl font-normal pt-5 my-5">
+                                Explore stories, trends, and ideas shaping the digital world <br />one post at a time.
                             </motion.p>
-                            <motion.div initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}}>
+                            <motion.div initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}} className='pt-5 mt-5'>
                                 <Button>
                                     <Link to={RouteHome} className='flex items-center justify-center px-5 gap-2 py-2 hover:scale-105 hover:transition-all hover:duration-300'>
                                         Explore more<FaArrowRight />
@@ -237,7 +237,7 @@ const Index = () => {
             {/* 2. About Section */}
             <section className="relative">
                 <div style={{ backgroundImage: `url(${bgAbout})` }} className="bg-cover bg-center bg-no-repeat w-full">
-                    <div className="bg-white/25 backdrop-blur-md flex items-center justify-center px-4 py-16">
+                    <div className="bg-white/25 backdrop-blur-md flex items-center justify-center px-4 py-10">
                         <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-14 items-center text-start">
 
                             <motion.div initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}} className="flex justify-center">
@@ -402,16 +402,24 @@ const Index = () => {
             <section className='relative'>
                 <div style={{ backgroundImage: `url(${bgBlog})` }} className="bg-cover bg-center bg-no-repeat w-full">
                     <div className="bg-white/25 backdrop-blur-lg flex items-center justify-center px-4 py-20">
-                        <div className="w-full lg:w-5/6 max-w-full flex flex-col gap-6 items-center justify-center">
+                        <div className="w-full lg:w-5/6 max-w-full flex flex-col gap-6">
 
                             <motion.div initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}}>
-                                <div>
-                                    <h2 className="text-black text-2xl md:text-4xl font-bold text-center leading-tight mb-2">
-                                       Latest Blogs & Stories
-                                    </h2>
-                                    <p className="text-black text-lg font-medium text-center mb-3">
-                                        Dive into fresh insights, ideas, and perspectives — curated just for you.
-                                    </p>
+                                <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between gap-6">
+                                    <div className="text-center lg:text-start">
+                                        <h2 className="text-black text-2xl md:text-4xl font-bold leading-tight mb-2">
+                                            Latest Blogs & Stories
+                                        </h2>
+                                        <p className="text-black text-lg font-medium mb-3">
+                                            Dive into fresh insights, ideas, and perspectives — curated just for you.
+                                        </p>
+                                    </div>
+
+                                    <Button>
+                                        <Link to={RouteHome} className="flex items-center justify-center px-5 gap-2 py-2 hover:scale-105 transition-all duration-300">
+                                            View more blogs <MdLogin />
+                                        </Link>
+                                    </Button>
                                 </div>
                             </motion.div>
 
@@ -427,14 +435,6 @@ const Index = () => {
                             </motion.div> */}
                             
                             <Blogs />
-
-                            <motion.div initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}}>
-                                <Button>
-                                    <Link to={RouteHome} className='flex items-center justify-center px-5 gap-2 py-2 hover:scale-105 hover:transition-all hover:duration-300'>
-                                          View more blogs<MdLogin />
-                                    </Link>
-                                </Button>
-                            </motion.div>
                         
                         </div>
                     </div>
