@@ -97,7 +97,7 @@ CLOUDINARY_API_SECRET=your_cloudinary_secret
 ## 👤 Author
 
 **Ajith**
-📎 [LinkedIn](www.linkedin.com/in/ajith11399)
+📎 [LinkedIn](https://linkedin.com/in/ajith11399)
 📁 [Portfolio](https://ajith11399.vercel.app)
 
 ---
