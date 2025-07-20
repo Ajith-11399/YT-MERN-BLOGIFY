@@ -40,11 +40,15 @@ import User from "./pages/User";
 import AuthRouteProtection from "./components/AuthRouteProtection";
 import AdminOnly from "./components/AdminOnly";
 import Index from "./pages/Index";
+import ScrollToTop from "./components/ScrollToTop";
+import RefreshToTop from "./components/RefreshToTop";
 
 function App() {
   return (
     <>
       <ToastContainer />
+      <RefreshToTop />
+      <ScrollToTop />
       <Routes>
         <Route path={RouteIndex} element={<Index />} />
         <Route element={<Layout />}>
