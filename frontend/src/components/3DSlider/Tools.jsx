@@ -85,7 +85,7 @@ const Tools = () => {
     ];
 
     return (
-        <div className="w-full px-4">
+        <motion.div initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}} className="w-full px-4">
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                 spaceBetween={30}
@@ -107,7 +107,7 @@ const Tools = () => {
             >
                 {tools.map((tool, index) => (
                     <SwiperSlide key={index}>
-                        <motion.div className="bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-md hover:scale-[1.05] hover:scale(105) hover:border-white transition-transform ease-in-out duration-300 border border-white/20 shadow-lg p-6 rounded-2xl flex flex-col items-center text-center h-full">
+                        <motion.div className="bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-md border border-white transition-transform ease-in-out duration-300 shadow-lg p-6 rounded-2xl flex flex-col items-center text-center h-full">
                             <img src={tool.img} alt={tool.tech} className="w-20 h-20 object-contain mb-4 drop-shadow-md" />
                             <h3 className="font-bold text-xl text-black tracking-wide">{tool.tech}</h3>
                             <p className="text-sm text-black/80 mt-2">{tool.desc}</p>
@@ -115,7 +115,7 @@ const Tools = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </div>
+        </motion.div>
     );
 };
 

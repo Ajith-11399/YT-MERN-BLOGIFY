@@ -54,7 +54,8 @@ import { IoIosSend } from "react-icons/io";
 
 // Footer
 import bgFooter from '../assets/bg-footer.jpg';
-import Tools from '@/components/3DSlider/Tools';
+import Tools from '../components/3DSlider/Tools';
+import Blogs from "../components/3DSlider/Blogs"
 
 const Index = () => {
 
@@ -414,16 +415,18 @@ const Index = () => {
                                 </div>
                             </motion.div>
 
-                            <motion.div initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}} className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 gap-10 py-10'>
+                            {/* <motion.div initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}} className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 gap-10 py-10'>
 
                                 {blogData?.blogs?.length > 0 
                                     ? blogData.blogs.slice(0, 6).map((blogs) => (
                                         <BlogCard key={blogs._id} props={blogs} />
-                                    ))
+                                    ))  
                                     : <div>Data Not Found!</div>
                                 }
 
-                            </motion.div>
+                            </motion.div> */}
+                            
+                            <Blogs />
 
                             <motion.div initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}}>
                                 <Button>
