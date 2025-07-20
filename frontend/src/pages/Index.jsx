@@ -273,7 +273,7 @@ const Index = () => {
                                 <h2 className="text-black text-2xl md:text-4xl font-bold text-center leading-tight mb-2">
                                    What You Can Do on Blogify
                                 </h2>
-                                <p className="text-black text-lg font-medium text-center mb-5">
+                                <p className="text-black text-lg font-normal text-center mb-5">
                                     Everything You Need to Read, Write, and Discover — All in One Place.
                                 </p>
                             </motion.div>
@@ -368,7 +368,7 @@ const Index = () => {
                                 <h2 className="text-black text-2xl md:text-4xl font-bold text-center leading-tight mb-2">
                                    Tools Powering Blogify
                                 </h2>
-                                <p className="text-black text-lg font-medium text-center mb-3">
+                                <p className="text-black text-lg font-normal text-center mb-3">
                                     Built with modern tools to ensure performance, security, and a smooth user experience.
                                 </p>
                             </div>
@@ -410,7 +410,7 @@ const Index = () => {
                                         <h2 className="text-black text-2xl md:text-4xl font-bold leading-tight mb-2">
                                             Latest Blogs & Stories
                                         </h2>
-                                        <p className="text-black text-lg font-medium mb-3">
+                                        <p className="text-black text-lg font-normal mb-3">
                                             Dive into fresh insights, ideas, and perspectives — curated just for you.
                                         </p>
                                     </div>
@@ -449,10 +449,10 @@ const Index = () => {
 
                             <motion.div initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay: 0.3}}>
                                 <h2 className="text-black text-2xl md:text-4xl font-bold text-center leading-tight mb-2">
-                                   Get In Touch With Us
+                                   Get In Touch
                                 </h2>
-                                <p className="text-black text-lg font-medium text-center mb-3">
-                                    Have questions, feedback, or just want to say hi? Fill out the form — we’d love to hear from you.
+                                <p className="text-black text-lg font-normal text-center mb-3">
+                                    Have questions, feedback, or just want to say hi? Fill out the form <br /> we’d love to hear from you.
                                 </p>
                             </motion.div>
 
